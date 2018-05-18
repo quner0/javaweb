@@ -1,0 +1,30 @@
+<xsd:schema xmlns="http://www.csit.com/beans" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.csit.com/beans" elementFormDefault="qualified">
+	<!-- 定义类型 -->
+	<xsd:complexType name="BeanType">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="bean">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:element name="property">
+									<xsd:complexType>
+										<xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+										<xsd:attribute name="value" type="xsd:string"></xsd:attribute>
+										<xsd:attribute name="ref" type="xsd:string"></xsd:attribute>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:choice>
+						</xsd:sequence>
+						<xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+						<xsd:attribute name="class" type="xsd:string"></xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="strict"></xsd:any>
+			</xsd:choice>
+
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="beans" type="BeanType"></xsd:element>
+</xsd:schema>

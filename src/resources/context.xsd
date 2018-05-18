@@ -1,0 +1,9 @@
+<xsd:schema xmlns="http://www.csit.com/context" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.csit.com/context" elementFormDefault="qualified">
+	<xsd:element name="component-scan">
+		<xsd:complexType>
+			<xsd:attribute name="base-package">
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

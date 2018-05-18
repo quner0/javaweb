@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.csit.com/beans"
+       xmlns:context="http://www.csit.com/context" 
+       >
+    <context:component-scan base-package="com.csit.javaweb_02"/>
+	<bean name="datasource" class="com.csit.javaweb_02.utils.Datasource">
+		<property name="jdbcurl" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl" />
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="user" value="wuji" />
+		<property name="password" value="123456" />
+	</bean>
+	<bean name="JdbcUtil" class="com.csit.javaweb_02.utils.JdbcUtil">
+		<property name="datasource" ref="datasource" />
+	</bean>
+</beans>

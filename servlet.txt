@@ -1,0 +1,11 @@
+tomcat:
+服务器:
+1、客户端（浏览器）访问web服务器，发送http请求
+2、web服务器接收请求，传递给处理程序（servlet）
+3、servlet容器加载servlet,产生实例化,向其传递请求和响应对象
+4、servlet实例使用请求对象获得客户端请求信息，然后进行处理
+5、servlet实例将处理的结果通过响应对象发送给客户端，容器负责确保响应正确送出，同时将控制返回web服务器
+servlet生命周期
+init()初始化
+service()提供服务
+destory()销毁
